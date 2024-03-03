@@ -1,4 +1,4 @@
-package com.emirhanuzun.util;
+package com.emirhanuzun.springcore.common;
 
 import org.springframework.stereotype.Component;
 
