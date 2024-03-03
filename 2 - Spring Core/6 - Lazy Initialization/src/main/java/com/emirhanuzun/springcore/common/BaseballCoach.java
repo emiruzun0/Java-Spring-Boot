@@ -1,13 +1,11 @@
 package com.emirhanuzun.springcore.common;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
-public class TrackCoach implements Coach{
+public class BaseballCoach implements Coach{
     @Override
     public String getDailyWorkout() {
-        return "Run a hard 5k!";
+        return "Spend 30 minutes in batting practice";
     }
 }
