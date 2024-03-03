@@ -15,6 +15,7 @@ public class DemoController {
     // You can use any method name
     @Autowired
     public DemoController(@Qualifier("cricketCoach") Coach theCoach){
+        System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = theCoach;
     }
 
