@@ -1,6 +1,5 @@
 package com.emirhanuzun.springboot.cruddemo.rest;
 
-import com.emirhanuzun.springboot.cruddemo.dao.EmployeeDAO;
 import com.emirhanuzun.springboot.cruddemo.entity.Employee;
 import com.emirhanuzun.springboot.cruddemo.service.EmployeeService;
 import com.emirhanuzun.springboot.cruddemo.service.EmployeeServiceImpl;
