@@ -1,13 +1,13 @@
-package com.emirhanuzun.springboot.cruddemo;
+package com.emirhanuzun.springboot.thymeleafdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CruddemoApplication {
+public class ThymeLeafDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CruddemoApplication.class, args);
+		SpringApplication.run(ThymeLeafDemoApplication.class, args);
 	}
 
 }

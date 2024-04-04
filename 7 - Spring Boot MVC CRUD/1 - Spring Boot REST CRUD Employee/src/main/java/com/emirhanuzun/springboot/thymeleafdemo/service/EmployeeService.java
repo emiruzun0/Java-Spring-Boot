@@ -1,6 +1,6 @@
-package com.emirhanuzun.springboot.cruddemo.service;
+package com.emirhanuzun.springboot.thymeleafdemo.service;
 
-import com.emirhanuzun.springboot.cruddemo.entity.Employee;
+import com.emirhanuzun.springboot.thymeleafdemo.entity.Employee;
 
 import java.util.List;
 
