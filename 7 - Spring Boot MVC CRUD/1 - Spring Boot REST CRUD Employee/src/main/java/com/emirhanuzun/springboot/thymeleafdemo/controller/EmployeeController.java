@@ -28,7 +28,6 @@ public class EmployeeController {
 
         // Get the employees from db
         List<Employee> theEmployees = employeeService.findAll();
-        System.out.println(theEmployees);
 
         // Add to the spring model
         theModel.addAttribute("employees",theEmployees);
