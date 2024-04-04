@@ -23,7 +23,7 @@ public class CustomerController {
 
         dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
 
-        
+
     }
 
     @GetMapping("/")
