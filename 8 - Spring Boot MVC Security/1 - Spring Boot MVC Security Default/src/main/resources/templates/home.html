@@ -24,6 +24,19 @@
 
 
     <hr>
+    <!-- Add a link to point to /leader ... This is for the managers-->
+    <p>
+        <a th:href="@{/leaders}">Leadership Meeting</a>
+        (Only for Manager people)
+    </p>
+
+    <!-- Add a link to point to /leader ... This is for the managers-->
+    <p>
+        <a th:href="@{/systems}">IT Systems Meeting</a>
+        (Only for Admin people)
+    </p>
+
+    <hr>
 
     <!-- Add a logout button -->
     <form action="#" th:action="@{/logout}" method="POST">
