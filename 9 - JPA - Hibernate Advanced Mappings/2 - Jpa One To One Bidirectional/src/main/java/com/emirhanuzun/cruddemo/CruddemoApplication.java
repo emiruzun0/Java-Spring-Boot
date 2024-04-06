@@ -22,11 +22,21 @@ public class CruddemoApplication {
 
 			//findInstructor(appDAO);
 
-			deleteInstructor(appDAO);
+			//deleteInstructor(appDAO);
 
+			findInstructorDetail(appDAO);
 		};
 	}
 
+	private void findInstructorDetail(AppDAO appDAO) {
+		int theId = 2;
+		System.out.println("Deleting instructor detail id : " + theId);
+
+		InstructorDetail tempInstructorDetail = appDAO.findInstructorDetailById(theId);
+
+		System.out.println("Instructor Detail : " + tempInstructorDetail );
+		System.out.println("The associate instructor only : " + tempInstructorDetail.getInstructor());
+	}
 
 	private void deleteInstructor(AppDAO appDAO) {
 		int theId = 1;

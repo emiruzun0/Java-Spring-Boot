@@ -38,4 +38,8 @@ public class AppDAOImpl implements AppDAO{
 
     }
 
+    @Override
+    public InstructorDetail findInstructorDetailById(int theId) {
+        return entityManager.find(InstructorDetail.class,theId);
+    }
 }
