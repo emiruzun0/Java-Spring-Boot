@@ -13,16 +13,25 @@ public class MyDemoLoggingAspect {
     // This is where I add all of my related advices for logging
 
     @Pointcut("execution(* com.emirhanuzun.aopdemo.dao.*.*(..))")
-    private void forDaoPackage(){};
+    private void forDaoPackage(){}
 
-    @Before("forDaoPackage()")
+    @Pointcut("execution(* com.emirhanuzun.aopdemo.dao.*.get*(..))")
+    private void getter(){}
+
+    @Pointcut("execution(* com.emirhanuzun.aopdemo.dao.*.set*(..))")
+    private void setter(){}
+
+    @Pointcut("forDaoPackage() && !(getter() || setter())")
+    private void forDaoPackageNoGetterSetter(){}
+
+    @Before("forDaoPackageNoGetterSetter()")
     public void beforeAddAccountAdvice(){
-        System.out.println("\n====>>>> Executing @Before advice on addAccount()");
+        System.out.println("====>>>> Executing @Before advice on addAccount()");
     }
 
-    @Before("forDaoPackage()")
+    @Before("forDaoPackageNoGetterSetter()")
     public void performApiAnalytics(){
-        System.out.println("\n====>>>> Performing API Analytics");
+        System.out.println("====>>>> Performing API Analytics");
     }
 
 }
