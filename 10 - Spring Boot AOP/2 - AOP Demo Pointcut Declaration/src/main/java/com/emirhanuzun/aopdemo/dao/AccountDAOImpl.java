@@ -46,6 +46,16 @@ public class AccountDAOImpl implements AccountDAO {
 
     @Override
     public List<Account> findAccounts() {
+        return findAccounts(false);
+    }
+
+    @Override
+    public List<Account> findAccounts(boolean tripWire) {
+
+        if(tripWire){
+            throw new RuntimeException("NO ENTRANCE !! ");
+        }
+
         List<Account> myAccounts = new ArrayList<>();
 
         // Create sample accounts
@@ -57,7 +67,7 @@ public class AccountDAOImpl implements AccountDAO {
         myAccounts.add(temp1);
         myAccounts.add(temp2);
         myAccounts.add(temp3);
-        
+
         return myAccounts;
     }
 }

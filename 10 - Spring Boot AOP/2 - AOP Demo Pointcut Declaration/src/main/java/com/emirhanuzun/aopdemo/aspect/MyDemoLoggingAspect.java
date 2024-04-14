@@ -55,7 +55,16 @@ public class MyDemoLoggingAspect {
 
     @AfterThrowing(
             pointcut = "execution(* com.emirhanuzun.aopdemo.dao.AccountDAO.findAccounts(..))",
-            throwing = "result")
+            throwing = "theExc")
+    public void afterThrowingFindAccountsAdvice(JoinPoint theJoinPoint, Throwable theExc){
+
+        // Print out which method we are advising on
+        String method = theJoinPoint.getSignature().toShortString();
+        System.out.println("\n=====>> Executing @AfterThrowing on method : " + method);
+
+        // Log the exception
+        System.out.println("\n====>>> The exception is : " + theExc);
+    }
 
     @Before("com.emirhanuzun.aopdemo.aspect.EmirAopExpressions.forDaoPackageNoGetterSetter()")
     public void beforeAddAccountAdvice(JoinPoint theJoinPoint){
