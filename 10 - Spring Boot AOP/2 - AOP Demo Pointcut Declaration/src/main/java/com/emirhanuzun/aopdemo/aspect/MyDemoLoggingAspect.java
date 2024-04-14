@@ -35,8 +35,8 @@ public class MyDemoLoggingAspect {
             // Log the exception
             System.out.println(exc.getMessage());
 
-            // Give user a custom message
-            result = "Major accident! But no worries, your car is on the way!";
+            // Rethrow the exception
+            throw exc;
         }
 
         // Get end timestamp
