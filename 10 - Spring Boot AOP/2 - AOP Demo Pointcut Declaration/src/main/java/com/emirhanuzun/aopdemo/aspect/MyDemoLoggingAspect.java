@@ -66,6 +66,15 @@ public class MyDemoLoggingAspect {
         System.out.println("\n====>>> The exception is : " + theExc);
     }
 
+    @After("execution(* com.emirhanuzun.aopdemo.dao.AccountDAO.findAccounts(..))")
+    public void afterFinallyFindAccountsAdvice(JoinPoint theJoinPoint){
+
+        // Print out which method we are advising on
+        String method = theJoinPoint.getSignature().toShortString();
+        System.out.println("\n=====>> Executing @After (finally) on method : " + method);
+
+    }
+
     @Before("com.emirhanuzun.aopdemo.aspect.EmirAopExpressions.forDaoPackageNoGetterSetter()")
     public void beforeAddAccountAdvice(JoinPoint theJoinPoint){
         System.out.println("\n====>>>> Executing @Before advice on method");
